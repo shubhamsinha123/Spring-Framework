@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+    <!-- define your beans here -->
+    
+    <bean id="engine1" class="D_I_Based_Vehicle_Package.PetrolEngine" ></bean>
+    
+    <bean id="engine2" class="D_I_Based_Vehicle_Package.DieselEngine" ></bean>
+    
+    <bean id="vehicle1" class="D_I_Based_Vehicle_Package.Bike">
+    <property name="bikeEngine" ref="engine1"></property>
+    </bean>
+    
+    <bean id="vehcile2" class="D_I_Based_Vehicle_Package.Car">
+    <property name="carEngine" ref="engine2"></property>
+    </bean>
+    
+</beans>      
